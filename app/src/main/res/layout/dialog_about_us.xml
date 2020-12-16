@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/app_icon"
+            android:background="@drawable/app_icon_bg"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="@dimen/standard"
+            android:layout_marginTop="@dimen/standard"
+            android:layout_marginEnd="@dimen/standard"
+            android:src="@drawable/app_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard"
+            android:text="@string/app_name"
+            app:layout_constraintEnd_toEndOf="@+id/app_icon"
+            app:layout_constraintStart_toStartOf="@+id/app_icon"
+            app:layout_constraintTop_toBottomOf="@+id/app_icon" />
+
+        <TextView
+            android:id="@+id/app_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small"
+            android:text="@string/app_version"
+            app:layout_constraintEnd_toEndOf="@+id/app_name"
+            app:layout_constraintStart_toStartOf="@+id/app_name"
+            app:layout_constraintTop_toBottomOf="@+id/app_name" />
+
+        <TextView
+            android:id="@+id/about_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard"
+            android:padding="@dimen/standard"
+            android:text="@string/about_us_details"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/app_version"
+            app:layout_constraintStart_toStartOf="@+id/app_version"
+            app:layout_constraintTop_toBottomOf="@+id/app_version" />
+
+        <TextView
+            android:id="@+id/contact_us_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small"
+            android:text="@string/contact_us"
+            app:layout_constraintEnd_toEndOf="@+id/about_us"
+            app:layout_constraintStart_toStartOf="@+id/about_us"
+            app:layout_constraintTop_toBottomOf="@+id/about_us" />
+
+        <TextView
+            android:id="@+id/email_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard"
+            android:autoLink="email"
+            android:text="@string/email"
+            app:layout_constraintEnd_toEndOf="@+id/contact_us_textview"
+            app:layout_constraintStart_toStartOf="@+id/contact_us_textview"
+            app:layout_constraintTop_toBottomOf="@+id/contact_us_textview" />
+
+        <TextView
+            android:id="@+id/phone_num1_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small"
+            android:autoLink="phone"
+            android:text="@string/phone_number_1"
+            app:layout_constraintEnd_toEndOf="@+id/email_textview"
+            app:layout_constraintStart_toStartOf="@+id/email_textview"
+            app:layout_constraintTop_toBottomOf="@+id/email_textview" />
+
+        <TextView
+            android:id="@+id/phone_num2_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="phone"
+            android:text="@string/phone_number_2"
+            app:layout_constraintEnd_toEndOf="@+id/phone_num1_textview"
+            app:layout_constraintStart_toStartOf="@+id/phone_num1_textview"
+            app:layout_constraintTop_toBottomOf="@+id/phone_num1_textview" />
+
+        <TextView
+            android:id="@+id/phone_num3_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoLink="phone"
+            android:text="@string/phone_num3_textview"
+            app:layout_constraintEnd_toEndOf="@+id/phone_num2_textview"
+            app:layout_constraintStart_toStartOf="@+id/phone_num2_textview"
+            app:layout_constraintTop_toBottomOf="@+id/phone_num2_textview" />
+
+        <TextView
+            android:id="@+id/rate_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard"
+            android:layout_marginTop="@dimen/standard"
+            android:text="@string/support_text"
+            app:layout_constraintEnd_toEndOf="@+id/phone_num3_textview"
+            app:layout_constraintStart_toStartOf="@+id/phone_num3_textview"
+            app:layout_constraintTop_toBottomOf="@+id/phone_num3_textview" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

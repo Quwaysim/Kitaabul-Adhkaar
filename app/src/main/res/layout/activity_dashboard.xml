@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_scrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    android:fillViewport="true"
+    tools:context=".ui.DashboardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/standard"
+                android:background="@drawable/header_bg"
+                android:outlineProvider="background"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:src="@drawable/header"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/standard"
+            android:layout_marginEnd="@dimen/standard"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/home_background"
+            android:layout_weight="2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout_section_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/ic_adhkaar"
+                        android:layout_width="@dimen/home_icons_size"
+                        android:layout_height="@dimen/home_icons_size"
+                        android:layout_marginStart="@dimen/standard"
+                        android:layout_marginTop="@dimen/standard"
+                        android:layout_marginEnd="@dimen/standard"
+                        android:background="@drawable/circle"
+                        android:contentDescription="@string/adhkar_icon_content_desc"
+                        android:elevation="@dimen/home_icons_elevation"
+                        android:padding="@dimen/home_icons_padding"
+                        app:layout_constraintBottom_toTopOf="@+id/textview_adhkar"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_muslim_tasbih" />
+
+                    <TextView
+                        android:id="@+id/textview_adhkar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/menu_adhkaar"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/ic_adhkaar"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/ic_adhkaar"
+                        app:layout_constraintTop_toBottomOf="@+id/ic_adhkaar" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.50" />
+
+                    <ImageView
+                        android:id="@+id/ic_suwar"
+                        android:layout_width="@dimen/home_icons_size"
+                        android:layout_height="@dimen/home_icons_size"
+                        android:layout_marginStart="@dimen/standard"
+                        android:layout_marginTop="@dimen/standard"
+                        android:layout_marginEnd="@dimen/standard"
+                        android:background="@drawable/circle"
+                        android:contentDescription="@string/selected_chapters_icon_desc"
+                        android:elevation="@dimen/home_icons_elevation"
+                        android:padding="@dimen/home_icons_padding"
+                        app:layout_constraintBottom_toTopOf="@+id/textView_suwar"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_suwar" />
+
+                    <TextView
+
+                        android:id="@+id/textView_suwar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/suwar"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/ic_suwar"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/ic_suwar"
+                        app:layout_constraintTop_toBottomOf="@+id/ic_suwar" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/standard"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout_section_one">
+
+                    <ImageView
+                        android:id="@+id/ic_forty_rabbana"
+                        android:layout_width="@dimen/home_icons_size"
+                        android:layout_height="@dimen/home_icons_size"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/circle"
+                        android:contentDescription="@string/forty_rabbana_icon_desc"
+                        android:elevation="@dimen/home_icons_elevation"
+                        android:padding="@dimen/home_icons_padding"
+                        app:layout_constraintBottom_toTopOf="@+id/textView_forty_rabbana"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_dua_hands" />
+
+                    <TextView
+                        android:id="@+id/textView_forty_rabbana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/forty_rabbana"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/ic_forty_rabbana"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/ic_forty_rabbana"
+                        app:layout_constraintTop_toBottomOf="@+id/ic_forty_rabbana" />
+
+                    <ImageView
+                        android:id="@+id/ic_forty_hadith"
+                        android:layout_width="@dimen/home_icons_size"
+                        android:layout_height="@dimen/home_icons_size"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/circle"
+                        android:contentDescription="@string/forty_hadith_icon_desc"
+                        android:elevation="@dimen/home_icons_elevation"
+                        android:padding="@dimen/home_icons_padding"
+                        app:layout_constraintBottom_toTopOf="@+id/textView_forty_hadith"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline3"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_forty_hadith" />
+
+                    <TextView
+                        android:id="@+id/textView_forty_hadith"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/standard"
+                        android:layout_marginBottom="16dp"
+                        android:text="@string/forty_hadith"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/ic_forty_hadith"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/ic_forty_hadith"
+                        app:layout_constraintTop_toBottomOf="@+id/ic_forty_hadith" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

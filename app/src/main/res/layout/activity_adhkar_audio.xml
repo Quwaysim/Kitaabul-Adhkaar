@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/grey"
+    android:layout_height="match_parent"
+    tools:context=".ui.AdhkarAudioActivity">
+
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="@dimen/standard"
+        android:layout_marginEnd="@dimen/standard"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/header_bg"
+        android:outlineProvider="background"
+        app:hide_on_touch="false"
+        app:use_controller="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:show_timeout="0" />
+
+    <TextView
+        android:id="@+id/audio_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard"
+        android:layout_marginTop="@dimen/standard"
+        android:layout_marginEnd="@dimen/standard"
+        android:background="@drawable/app_icon_bg"
+        android:padding="@dimen/standard"
+        android:text="@string/audio_1"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:drawableEndCompat="@drawable/ic_mp3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/audio_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard"
+        android:layout_marginTop="@dimen/standard"
+        android:layout_marginEnd="@dimen/standard"
+        android:background="@drawable/app_icon_bg"
+        android:padding="@dimen/standard"
+        android:text="@string/audio_2"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:drawableEndCompat="@drawable/ic_mp3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/audio_one" />
+
+    <TextView
+        android:id="@+id/audio_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/standard"
+        android:layout_marginTop="@dimen/standard"
+        android:layout_marginEnd="@dimen/standard"
+        android:background="@drawable/app_icon_bg"
+        android:padding="@dimen/standard"
+        android:text="@string/audio_3"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:drawableEndCompat="@drawable/ic_mp3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/audio_two" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

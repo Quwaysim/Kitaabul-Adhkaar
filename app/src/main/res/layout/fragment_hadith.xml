@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/hadith_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard"
+            android:layout_marginTop="@dimen/standard"
+            android:textAlignment="center"
+            android:layout_marginEnd="@dimen/standard"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/def_text_size"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/test" />
+
+        <TextView
+            android:id="@+id/hadith_en"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/def_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/hadith_title"
+            app:layout_constraintStart_toStartOf="@+id/hadith_title"
+            app:layout_constraintTop_toBottomOf="@+id/hadith_title"
+            tools:text="Hadith" />
+
+        <TextView
+            android:id="@+id/hadith_ar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard"
+            android:fontFamily="@font/amiri"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/def_text_size"
+            app:layout_constraintEnd_toEndOf="@+id/hadith_en"
+            app:layout_constraintStart_toStartOf="@+id/hadith_en"
+            app:layout_constraintTop_toBottomOf="@+id/hadith_en"
+            tools:text="حديث" />
+
+        <TextView
+            android:id="@+id/references"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard"
+            android:fontFamily="@font/amiri"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/hadith_ar"
+            app:layout_constraintStart_toStartOf="@+id/hadith_ar"
+            app:layout_constraintTop_toBottomOf="@+id/hadith_ar"
+            tools:text="حديث" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
